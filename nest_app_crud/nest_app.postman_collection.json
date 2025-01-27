@@ -1,0 +1,224 @@
+{
+	"info": {
+		"_postman_id": "0501e427-6b4a-4e14-b9d7-16f82c2ca81a",
+		"name": "nest_app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11619268",
+		"_collection_link": "https://gold-crater-485241.postman.co/workspace/Team-Workspace~f9d8922f-3ed7-428c-8def-162b26c5a530/collection/11619268-0501e427-6b4a-4e14-b9d7-16f82c2ca81a?action=share&source=collection_link&creator=11619268"
+	},
+	"item": [
+		{
+			"name": "Read",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/users",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "firstName",
+							"value": "Beytullah",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "kahraman",
+							"type": "text"
+						},
+						{
+							"key": "isActive",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/users",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "firstName",
+							"value": "Beytullah",
+							"disabled": true
+						},
+						{
+							"key": "lastName",
+							"value": "Kh",
+							"disabled": true
+						},
+						{
+							"key": "isActive",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "firstName",
+							"value": "Beytullah",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "Kahraman 2",
+							"type": "text"
+						},
+						{
+							"key": "isActive",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/users/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "firstName",
+							"value": "Beytullah",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "kahraman",
+							"type": "text"
+						},
+						{
+							"key": "isActive",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/users/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "firstName",
+							"value": "Beytullah",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "kahraman",
+							"type": "text"
+						},
+						{
+							"key": "isActive",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/users/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
