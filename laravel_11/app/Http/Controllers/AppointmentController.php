@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Appointment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 
 class AppointmentController extends Controller
 {
@@ -42,7 +43,7 @@ class AppointmentController extends Controller
             'client_email' => 'nullable|email|max:255',
         ]);
 
-        
+        Log::info("veri kaydedildi");
 
         $validated['user_id'] = Auth::user()->id;
 
