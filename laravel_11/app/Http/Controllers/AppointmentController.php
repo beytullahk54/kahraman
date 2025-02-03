@@ -42,10 +42,15 @@ class AppointmentController extends Controller
             'client_email' => 'nullable|email|max:255',
         ]);
 
+        
+
         $validated['user_id'] = Auth::user()->id;
 
         Appointment::create($validated);
 
+        return response()->json([
+            'message' => 'Randevu başarıyla oluşturuldu'
+        ], 201);
         return redirect()
             ->route('appointments.index')
             ->with('success', 'Randevu başarıyla oluşturuldu');
@@ -84,6 +89,9 @@ class AppointmentController extends Controller
 
         $appointment->update($validated);
 
+        return response()->json([
+            'message' => 'Randevu başarıyla güncellendi'
+        ], 201);
         return redirect()
             ->route('appointments.index')
             ->with('success', 'Randevu başarıyla güncellendi');
