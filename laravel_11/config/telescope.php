@@ -65,6 +65,14 @@ return [
     ],
 
     /*
+     * Telescope verilerinin otomatik temizlenmesi için ayarlar
+     */
+    'prune' => [
+        'hours' => 168,     // 7 gün = 7 * 24 saat
+        'chunk' => 1000,    // Her seferde silinecek kayıt sayısı
+    ],
+
+    /*
     |--------------------------------------------------------------------------
     | Telescope Queue
     |--------------------------------------------------------------------------
