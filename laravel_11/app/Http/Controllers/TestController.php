@@ -22,10 +22,10 @@ class TestController extends Controller
     public function index()
     {
         $credentials = [
-            'client_id' => '085300000009704',
+            'client_id' => '085300000009597',
             'store_key' => '12345678',
-            'username' => 'QNB_API_KULLANICI_3DPAY',
-            'password' => 'UcBN0'
+            'username' => 'QNB_API_KULLANICI',
+            'password' => 'FwCX2'
         ];
         $card = [
             'number' => '9792091234123455',
@@ -34,7 +34,7 @@ class TestController extends Controller
             'year' => '20'
         ];
         $order = [
-            'code' => 'order123',
+            'code' => 'order12324',
             'amount' => '100',
             'installment' => '0',
             'success_url' => 'http://laravel_11.test/api/test/qnbReturn',
