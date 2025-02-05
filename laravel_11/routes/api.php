@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AppointmentController;
 use App\Http\Controllers\ActivityLogController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\TestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,11 @@ Route::middleware('auth:sanctum')->group(function () {
     // Randevular için API endpoint'leri
     Route::apiResource('appointments', AppointmentController::class);
     
+    Route::post('/test/index', [TestController::class, 'index']);
+
     // Aktivite logları için API endpoint'i
     Route::get('/activity-logs', [ActivityLogController::class, 'index']);
 }); 
+
+Route::post('/test/qnbReturn', [TestController::class, 'qnbReturn']);
+Route::post('/test/qnbReturn2', [TestController::class, 'qnbReturn2']);
