@@ -34,6 +34,9 @@ Route::middleware('auth:sanctum')->group(function () {
 
     // Aktivite logları için API endpoint'i
     Route::get('/activity-logs', [ActivityLogController::class, 'index']);
+
+    Route::get('/appointments', [AppointmentController::class, 'index'])
+        ->name('api.appointments.index');
 }); 
 
 Route::post('/test/qnbReturn', [TestController::class, 'qnbReturn']);

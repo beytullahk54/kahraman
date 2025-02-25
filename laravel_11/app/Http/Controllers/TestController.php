@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use App\Service\Payments\FinansbankPos;
+use Illuminate\Support\Facades\Http;
 
 class TestController extends Controller
 {
@@ -42,6 +43,8 @@ class TestController extends Controller
         ];
         $form = $this->finansbankPos->form($credentials, $card, $order);
 
+        $response = Http::post($form['gateway'], $form['inputs']);
+        return $response;
         Log::info("test");
         return response()->json([
             'form' => $form,

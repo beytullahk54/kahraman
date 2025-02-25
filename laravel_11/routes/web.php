@@ -5,8 +5,10 @@ use App\Http\Controllers\AppointmentController;
 use App\Http\Controllers\ActivityLogController;
 use Illuminate\Support\Facades\Route;
 
+
 Route::get('/', function () {
     return view('welcome');
+    
 });
 
 Route::get('/dashboard', function () {
